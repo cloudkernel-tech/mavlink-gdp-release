@@ -1883,6 +1883,10 @@
         </description>
         <param index="1" label="System ID" minValue="0" maxValue="255" increment="1">Vehicle system id, this way ground station can request arm authorization on behalf of any vehicle</param>
       </entry>
+      <entry value="3100" name="MAV_CMD_DO_FLYINGROVER_TRANSITION" hasLocation="false" isDestination="false">
+        <description>Request flying rover transition</description>
+        <param index="1" label="State" enum="MAV_FLYINGROVER_STATE">The target flying rover state. Only MAV_FLYINGROVER_STATE_MC and MAV_FLYINGROVER_STATE_ROVER can be used.</param>
+      </entry>
       <entry value="4000" name="MAV_CMD_SET_GUIDED_SUBMODE_STANDARD" hasLocation="false" isDestination="false">
         <description>This command sets the submode to standard guided when vehicle is in guided mode. The vehicle holds position and altitude and the user can input the desired velocities along all three axes.
                   </description>
@@ -2964,6 +2968,24 @@
         <description>VTOL is in multicopter state</description>
       </entry>
       <entry value="4" name="MAV_VTOL_STATE_FW">
+        <description>VTOL is in fixed-wing state</description>
+      </entry>
+    </enum>
+    <enum name="MAV_FLYINGROVER_STATE">
+      <description>Enumeration of flying rover states</description>
+      <entry value="0" name="MAV_FLYINGROVER_STATE_UNDEFINED">
+        <description>MAV is not configured as VTOL</description>
+      </entry>
+      <entry value="1" name="MAV_FLYINGROVER_STATE_ROVER">
+        <description>VTOL is in transition from multicopter to fixed-wing</description>
+      </entry>
+      <entry value="2" name="MAV_FLYINGROVER_STATE_MC">
+        <description>VTOL is in transition from fixed-wing to multicopter</description>
+      </entry>
+      <entry value="3" name="MAV_FLYINGROVER_STATE_TRANSITION_TO_MC">
+        <description>VTOL is in multicopter state</description>
+      </entry>
+      <entry value="4" name="MAV_FLYINGROVER_STATE_TRANSITION_TO_ROVER">
         <description>VTOL is in fixed-wing state</description>
       </entry>
     </enum>
@@ -5817,6 +5839,7 @@
       <description>Provides state for additional features</description>
       <field type="uint8_t" name="vtol_state" enum="MAV_VTOL_STATE">The VTOL state if applicable. Is set to MAV_VTOL_STATE_UNDEFINED if UAV is not in VTOL configuration.</field>
       <field type="uint8_t" name="landed_state" enum="MAV_LANDED_STATE">The landed state. Is set to MAV_LANDED_STATE_UNDEFINED if landed state is unknown.</field>
+      <field type="uint8_t" name="flyingrover_state" enum="MAV_LANDED_STATE">The flying rover state. Is set to FLYINGROVER_STATE_UNDEFINED if the state is unknown.</field>
     </message>
     <message id="246" name="ADSB_VEHICLE">
       <description>The location and information of an ADSB vehicle</description>
