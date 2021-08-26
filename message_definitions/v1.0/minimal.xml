@@ -176,6 +176,9 @@
       <entry value="35" name="MAV_TYPE_DECAROTOR">
         <description>Decarotor</description>
       </entry>
+      <entry value="36" name="MAV_TYPE_TRICOPTER_FLYINGROVER">
+        <description>Tricopter flying rover</description>
+      </entry>
     </enum>
     <enum name="MAV_MODE_FLAG" bitmask="true">
       <description>These flags encode the MAV mode.</description>
