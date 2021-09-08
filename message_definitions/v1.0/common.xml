@@ -2974,19 +2974,19 @@
     <enum name="MAV_FLYINGROVER_STATE">
       <description>Enumeration of flying rover states</description>
       <entry value="0" name="MAV_FLYINGROVER_STATE_UNDEFINED">
-        <description>MAV is not configured as VTOL</description>
+        <description>MAV is not configured as flyingrover</description>
       </entry>
       <entry value="1" name="MAV_FLYINGROVER_STATE_ROVER">
-        <description>VTOL is in transition from multicopter to fixed-wing</description>
+        <description>flyingrover is rover state</description>
       </entry>
       <entry value="2" name="MAV_FLYINGROVER_STATE_MC">
-        <description>VTOL is in transition from fixed-wing to multicopter</description>
+        <description>flyingrover is in multicopter state</description>
       </entry>
       <entry value="3" name="MAV_FLYINGROVER_STATE_TRANSITION_TO_MC">
-        <description>VTOL is in multicopter state</description>
+        <description>flyingrover is in transition from rover to multicopter</description>
       </entry>
       <entry value="4" name="MAV_FLYINGROVER_STATE_TRANSITION_TO_ROVER">
-        <description>VTOL is in fixed-wing state</description>
+        <description>flyingrover is in transition from multicopter to rover</description>
       </entry>
     </enum>
     <enum name="MAV_LANDED_STATE">
