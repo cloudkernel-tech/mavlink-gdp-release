@@ -1887,6 +1887,10 @@
         <description>Request flying rover transition</description>
         <param index="1" label="State" enum="MAV_FLYINGROVER_STATE">The target flying rover state. Only MAV_FLYINGROVER_STATE_MC and MAV_FLYINGROVER_STATE_ROVER can be used.</param>
       </entry>
+      <entry value="3101" name="MAV_CMD_SET_ROVER_FORWARD_REVERSE_DRIVING" hasLocation="false" isDestination="false">
+        <description>Set forward or reverse driving status for rover mode </description>
+        <param index="1" label="Forward Driving State">The forward/reverse driving state in rover mode, set 1 for forward, 0 for reverse</param>
+      </entry>
       <entry value="4000" name="MAV_CMD_SET_GUIDED_SUBMODE_STANDARD" hasLocation="false" isDestination="false">
         <description>This command sets the submode to standard guided when vehicle is in guided mode. The vehicle holds position and altitude and the user can input the desired velocities along all three axes.
                   </description>
