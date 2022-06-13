@@ -152,8 +152,12 @@ ${{include_list:#include "../${base}/${base}.h"
 #define MAVLINK_THIS_XML_IDX ${xml_idx}
 
 #if MAVLINK_THIS_XML_IDX == MAVLINK_PRIMARY_XML_IDX
+#ifndef MAVLINK_MESSAGE_INFO
 # define MAVLINK_MESSAGE_INFO {${message_info_array}}
+#endif
+#ifndef MAVLINK_MESSAGE_NAMES
 # define MAVLINK_MESSAGE_NAMES {${message_name_array}}
+#endif
 # if MAVLINK_COMMAND_24BIT
 #  include "../mavlink_get_info.h"
 # endif
