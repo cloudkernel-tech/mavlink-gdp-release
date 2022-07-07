@@ -967,6 +967,26 @@
         <param index="6" label="Longitude">Longitude</param>
         <param index="7" label="Ground Altitude" units="m">Altitude (ground level)</param>
       </entry>
+      <entry value="86" name="MAV_CMD_NAV_FLYINGROVER_TAKEOFF" hasLocation="true" isDestination="true">
+        <description>Takeoff from ground using flying rover mode, and transition to multicopter flight with specified heading.</description>
+        <param index="1">Empty</param>
+        <param index="2" label="Transition Heading" enum="FLYINGROVER_TRANSITION_HEADING">Front transition heading.</param>
+        <param index="3">Empty</param>
+        <param index="4" label="Yaw Angle" units="deg">Yaw angle. NaN to use the current system yaw heading mode (e.g. yaw towards next waypoint, yaw to home, etc.).</param>
+        <param index="5" label="Latitude">Latitude</param>
+        <param index="6" label="Longitude">Longitude</param>
+        <param index="7" label="Altitude" units="m">Altitude</param>
+      </entry>
+      <entry value="87" name="MAV_CMD_NAV_FLYINGROVER_LAND" hasLocation="true" isDestination="true">
+        <description>Land using flyingrover mode</description>
+        <param index="1">Empty</param>
+        <param index="2">Empty</param>
+        <param index="3" label="Approach Altitude" units="m">Approach altitude (with the same reference as the Altitude field). NaN if unspecified.</param>
+        <param index="4" label="Yaw" units="deg">Yaw angle. NaN to use the current system yaw heading mode (e.g. yaw towards next waypoint, yaw to home, etc.).</param>
+        <param index="5" label="Latitude">Latitude</param>
+        <param index="6" label="Longitude">Longitude</param>
+        <param index="7" label="Ground Altitude" units="m">Altitude (ground level)</param>
+      </entry>
       <!-- IDs 90 and 91 are reserved until the end of 2014,
                     as they were used in some conflicting proposals
                     between PX4 and ArduPilot and need to be kept
@@ -3270,6 +3290,24 @@
         <description>Use the specified heading in parameter 4.</description>
       </entry>
       <entry value="4" name="VTOL_TRANSITION_HEADING_ANY">
+        <description>Use the current heading when reaching takeoff altitude (potentially facing the wind when weather-vaning is active).</description>
+      </entry>
+    </enum>
+    <enum name="FLYINGROVER_TRANSITION_HEADING">
+      <description>Direction of VTOL transition</description>
+      <entry value="0" name="FLYINGROVER_TRANSITION_HEADING_VEHICLE_DEFAULT">
+        <description>Respect the heading configuration of the vehicle.</description>
+      </entry>
+      <entry value="1" name="FLYINGROVER_TRANSITION_HEADING_NEXT_WAYPOINT">
+        <description>Use the heading pointing towards the next waypoint.</description>
+      </entry>
+      <entry value="2" name="FLYINGROVER_TRANSITION_HEADING_TAKEOFF">
+        <description>Use the heading on takeoff (while sitting on the ground).</description>
+      </entry>
+      <entry value="3" name="FLYINGROVER_TRANSITION_HEADING_SPECIFIED">
+        <description>Use the specified heading in parameter 4.</description>
+      </entry>
+      <entry value="4" name="FLYINGROVER_TRANSITION_HEADING_ANY">
         <description>Use the current heading when reaching takeoff altitude (potentially facing the wind when weather-vaning is active).</description>
       </entry>
     </enum>
