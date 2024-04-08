@@ -6576,6 +6576,11 @@
       <field type="uint8_t" name="flag_nav_local_plan_valid">Boolean indicating whether the local plan from navigation is valid for obstacle avoidance</field>
       <field type="uint8_t" name="flag_laser_scan_data_valid">Boolean indicating whether the laser scan data is valid for obstacle detection</field>
     </message>
+    <message id="342" name="VCU_COMMAND_VELOCITY">
+      <description>VCU command velocity from/to the pursuit autopilot</description>
+      <field type="float[3]" name="linear_vel">Linear velocities along body axies in FRD frame</field>
+      <field type="float[3]" name="angular_vel">Angular velocities along body axies in FRD frame</field>
+    </message>
     <message id="350" name="DEBUG_FLOAT_ARRAY">
       <description>Large debug/prototyping array. The message uses the maximum available payload for data. The array_id and name fields are used to discriminate between messages in code and in user interfaces (respectively). Do not use in production code.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
