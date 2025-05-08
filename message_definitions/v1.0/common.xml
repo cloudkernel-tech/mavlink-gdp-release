@@ -6595,6 +6595,12 @@
       <field type="float[3]" name="linear_vel">Linear velocities along body axies in FRD frame</field>
       <field type="float[3]" name="angular_vel">Angular velocities along body axies in FRD frame</field>
     </message>
+    <message id="344" name="VCU_BMS_STATUS">
+      <description>VCU bms status from the pursuit autopilot, see pursuit_msgs/VcuBmsStatus definition</description>
+      <field type="float" name="voltage" units="v">voltage</field>
+      <field type="float" name="current" units="A">current</field>
+      <field type="float" name="remained_capacity" units="A*h">remained_capacity</field>
+    </message>
     <message id="350" name="DEBUG_FLOAT_ARRAY">
       <description>Large debug/prototyping array. The message uses the maximum available payload for data. The array_id and name fields are used to discriminate between messages in code and in user interfaces (respectively). Do not use in production code.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
