@@ -6600,6 +6600,9 @@
       <field type="float" name="voltage" units="v">voltage</field>
       <field type="float" name="current" units="A">current</field>
       <field type="float" name="remained_capacity" units="A*h">remained_capacity</field>
+      <field type="float" name="remained_percentage">remained_percentage</field>
+      <field type="float" name="max_temperature" units="Celsius">max_temperature</field>
+      <field type="float" name="min_temperature" units="Celsius">min_temperature</field>
     </message>
     <message id="350" name="DEBUG_FLOAT_ARRAY">
       <description>Large debug/prototyping array. The message uses the maximum available payload for data. The array_id and name fields are used to discriminate between messages in code and in user interfaces (respectively). Do not use in production code.</description>
