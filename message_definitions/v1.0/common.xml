@@ -6604,6 +6604,11 @@
       <field type="float" name="max_temperature" units="Celsius">max_temperature</field>
       <field type="float" name="min_temperature" units="Celsius">min_temperature</field>
     </message>
+    <message id="345" name="VCU_DIRECT_CAN_CTRL">
+      <description>Direct CAN control message that will be parsed to the VCU base, see pursuit_msgs/VcuDirectCanCtrl definition</description>
+      <field type="uint32_t" name="msg_id">message ID</field>
+      <field type="uint8_t[8]" name="msg_body">message body</field>
+    </message>
     <message id="350" name="DEBUG_FLOAT_ARRAY">
       <description>Large debug/prototyping array. The message uses the maximum available payload for data. The array_id and name fields are used to discriminate between messages in code and in user interfaces (respectively). Do not use in production code.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
