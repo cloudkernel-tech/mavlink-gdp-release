@@ -6594,6 +6594,7 @@
       <description>VCU command velocity from/to the pursuit autopilot</description>
       <field type="float[3]" name="linear_vel">Linear velocities along body axies in FRD frame</field>
       <field type="float[3]" name="angular_vel">Angular velocities along body axies in FRD frame</field>
+      <field type="uint8_t" name="flag_nav_src">Boolean indicating the command is from the online navigation module</field>
     </message>
     <message id="344" name="VCU_BMS_STATUS">
       <description>VCU bms status from the pursuit autopilot, see pursuit_msgs/VcuBmsStatus definition</description>
